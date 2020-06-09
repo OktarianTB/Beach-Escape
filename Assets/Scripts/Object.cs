@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Object : MonoBehaviour
 {
-    [SerializeField()]
-    float speed = 4;
+
+    public float speed;
     public enum ObjectType { RECYCLABLE, DANGER };
     public ObjectType type;
 
+    StickMan stickMan;
+
     void Start()
     {
-        
+        stickMan = FindObjectOfType<StickMan>();
+        if (!stickMan)
+        {
+            Debug.LogError("Stick Man cannot be found!");
+        }
     }
     
     void FixedUpdate()
@@ -28,12 +34,16 @@ public class Object : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(type == ObjectType.DANGER)
+        if(type == ObjectType.DANGER && !stickMan.gameIsFinished)
         {
-            print("Game Over");
+            stickMan.gameIsFinished = true;
+            stickMan.PlayScreamSound();
+            stickMan.gameOverScreen.SetActive(true);
         }
-        else
+        else if (!stickMan.gameIsFinished)
         {
+            stickMan.score++;
+            stickMan.PlaySuccessSound();
             Destroy(gameObject);
         }
     }

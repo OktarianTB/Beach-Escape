@@ -9,26 +9,65 @@ public class SpawnObjects : MonoBehaviour
     float timeLeft;
     string lastPrefab;
 
+    float currentSpeed;
+    float currentTimeRangeStart;
+    float currentTimeRangeEnd;
+    bool decreaseTime = true;
+
+    StickMan stickMan;
+
     void Start()
     {
         timeLeft = 0;
-    }
-    
-    void Update()
-    {
-        timeLeft -= Time.deltaTime;
+        currentSpeed = Mathf.Log(3 * (Time.time + 2));
+        ManageSpawnTiming();
 
-        if(timeLeft <= 0)
+        stickMan = FindObjectOfType<StickMan>();
+        if (!stickMan)
         {
-            SpawnNewObject();
-            timeLeft = getTime();
+            Debug.LogError("Stick Man cannot be found!");
         }
     }
 
-    float getTime()
+
+    void Update()
     {
-        return Random.Range(2, 4);
+        ManageSpawnTiming();
+        ManageSpeed();
+
+        timeLeft -= Time.deltaTime;
+
+        if (timeLeft <= 0 && !stickMan.gameIsFinished)
+        {
+            SpawnNewObject();
+            timeLeft = Random.Range(currentTimeRangeStart, currentTimeRangeEnd);
+        }
     }
+
+    private void ManageSpeed()
+    {
+        currentSpeed = 0.05f * Time.timeSinceLevelLoad + 5f;
+        if (currentSpeed > 7)
+        {
+            currentSpeed = 7f;
+        }
+    }
+
+    private void ManageSpawnTiming()
+    {
+        if (decreaseTime)
+        {
+            currentTimeRangeStart = -0.02f * Time.timeSinceLevelLoad + 1.5f;
+            currentTimeRangeEnd = -0.02f * Time.timeSinceLevelLoad + 2f;
+            if (Time.time > 30)
+            {
+                currentTimeRangeStart = 0.9f;
+                currentTimeRangeEnd = 1.1f;
+                decreaseTime = false;
+            }
+        }
+    }
+
 
     void SpawnNewObject()
     {
@@ -47,6 +86,7 @@ public class SpawnObjects : MonoBehaviour
         Vector3 pos = new Vector3(spawnPosition.position.x,
             spawnPosition.position.y, spawnPosition.position.z);
         GameObject newObject = Instantiate(prefabs[index], pos, Quaternion.identity);
+        newObject.GetComponent<Object>().speed = currentSpeed;
     }
 
 
