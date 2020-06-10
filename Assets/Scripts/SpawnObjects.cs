@@ -58,7 +58,7 @@ public class SpawnObjects : MonoBehaviour
         if (decreaseTime)
         {
             currentTimeRangeStart = -0.02f * Time.timeSinceLevelLoad + 1.5f;
-            currentTimeRangeEnd = -0.02f * Time.timeSinceLevelLoad + 2f;
+            currentTimeRangeEnd = -0.015f * Time.timeSinceLevelLoad + 2f;
             if (Time.time > 30)
             {
                 currentTimeRangeStart = 0.9f;

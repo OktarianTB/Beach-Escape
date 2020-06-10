@@ -4,3 +4,6 @@ Beach-Escape/ProjectSettings/* linguist-vendored
 Beach-Escape/Temp/* linguist-vendored
 Beach-Escape/Packages/* linguist-vendored
 Beach-Escape/obj/* linguist-vendored
+*/*/Beach-Escape/*.vb linguist-generated
+*/Beach-Escape/*.vb linguist-generated
+Beach-Escape/*/*.vb linguist-generated
