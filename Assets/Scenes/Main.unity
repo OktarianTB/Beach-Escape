@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206668c1a30237b4eaba1f979fb39e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 4
+  jumpHeight: 3.6
   gameIsFinished: 0
   score: 0
   scoreText: {fileID: 2087900411}
@@ -1471,11 +1471,11 @@ MonoBehaviour:
   - {fileID: 6959115935116544721, guid: ae142ca37f2a68f4a902f444ab2a4a10, type: 3}
   - {fileID: 5363470422712822008, guid: 9e21eb8b49258e2439ebb2ff2932b40e, type: 3}
   - {fileID: 7599420923727857876, guid: 2e2f0a5207a6bc044a1d1f1f71da8674, type: 3}
+  - {fileID: 1888787133916807116, guid: ca6fb3e160285dc40b14137633788d20, type: 3}
+  - {fileID: 1888787133916807116, guid: c8458f6ebb9c4b3409980e933cd8f6bc, type: 3}
   - {fileID: 1888787133916807116, guid: c8458f6ebb9c4b3409980e933cd8f6bc, type: 3}
   - {fileID: 8250169707376002286, guid: 9b623f4271bcc7b458ab9697c29fdf0f, type: 3}
-  - {fileID: 1888787133916807116, guid: c8458f6ebb9c4b3409980e933cd8f6bc, type: 3}
-  - {fileID: 8250169707376002286, guid: 9b623f4271bcc7b458ab9697c29fdf0f, type: 3}
-  - {fileID: 8250169707376002286, guid: 9b623f4271bcc7b458ab9697c29fdf0f, type: 3}
+  - {fileID: 1888787133916807116, guid: ca6fb3e160285dc40b14137633788d20, type: 3}
   - {fileID: 8250169707376002286, guid: 9b623f4271bcc7b458ab9697c29fdf0f, type: 3}
 --- !u!4 &998177785
 Transform:

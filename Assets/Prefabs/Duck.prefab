@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7430618113412364344}
   - component: {fileID: 4733259199732531874}
   m_Layer: 0
-  m_Name: Sleeping StickMan 1
+  m_Name: Duck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888787133916807116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.465, y: -3.262, z: 0}
-  m_LocalScale: {x: -0.55, y: 0.55, z: 0.55}
+  m_LocalPosition: {x: 0.67, y: -3.16, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 93fe27f89c32aca45b6eeec9e4329d1f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ece7720c58d23ef459a7a31142e34ba2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,16 +110,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5017855, y: 0.044712186}
+  m_Offset: {x: -0.25797677, y: -0.16868162}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 3}
+    oldSize: {x: 4, y: 4}
     newSize: {x: 6, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.911487, y: 2.2760942}
+  m_Size: {x: 2.7412038, y: 3.3612719}
   m_EdgeRadius: 0
